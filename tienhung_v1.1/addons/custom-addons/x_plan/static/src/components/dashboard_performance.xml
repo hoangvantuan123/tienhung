@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve"  >
+    <t t-name="dash.PerformanceDashboard" owl="1">
+        <style>
+           
+            .my-custom-table th,
+            .my-custom-table td {
+                text-align: center; /* Chỉnh lề của bảng */
+                border: 1px solid #ccc; /* Màu đường viền */
+            }
+            .chart-container {
+               
+                max-width: 80%; /* Điều chỉnh chiều rộng tối đa */
+                height: auto; /* Chiều cao tự động theo nội dung */
+            }
+        </style>
+        <div class="vh-100 overflow-auto bg-muted">
+            <div class="row">
+                <div class="row m-0  ">
+                    <table class=" my-custom-table table text-center">
+                        <thead>
+                            <tr class="text-center">
+                                <th scope="col">LINE</th>
+                                <th scope="col">DATE</th>
+                                <th scope="col">#</th>
+                                <th scope="col">TIME</th>
+                                <th scope="col">#</th>
+                                <th scope="col">WORKER</th>
+                                <th scope="col">#</th>
+                                <th scope="col">ABSENT</th>
+                                <th scope="col">#</th>
+                            </tr>
+                        </thead>
+                        <tbody class="b-20">
+                            <tr class="text-center">
+                                <th scope="row" rowspan="2">#</th>
+                                <td>STYLE</td>
+                                <td colspan="3">#</td>
+                                <td>COLOR</td>
+                                <td colspan="3">#</td>
+                            </tr>
+
+                            <tr class="text-center bg-primary text-white">
+                                <th scope="row">#</th>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                            </tr>
+
+                            <tr class="text-center">
+                                <th scope="row" class="text-center bg-primary text-white">T.HIỆN/NGÀY(PCS)</th>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                            </tr>
+                            <tr class="text-center">
+                                <th scope="row" class="text-center bg-primary text-white">LUỸ KẾ(PCS)</th>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                                <td>#</td>
+                            </tr>
+                            <tr >
+                                <th scope="row">BIỂU ĐỒ NĂNG SUẤT CỤM</th>
+                                <td colspan="8">
+                                    <div class="chart-container">
+                                        <ChartRenderer type="'bar'" title="'Yearly Sales Report'" />
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </t>
+</templates>
+
+ 

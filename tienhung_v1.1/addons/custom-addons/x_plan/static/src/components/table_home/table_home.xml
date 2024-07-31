@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.tableHome" owl="1">
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Role</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>24/05/1995</td>
+                    <td>Web Developer</td>
+                    <td>$120,000</td>
+                </tr>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>04/11/1980</td>
+                    <td>Web Designer</td>
+                    <td>$100,000</td>
+                </tr>
+                <tr>
+                    <td>Gary Barlow</td>
+                    <td>24/05/1995</td>
+                    <td>Singer</td>
+                    <td>$20,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </t>
+</templates>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.New" owl="1">
+        <style>
+    .media {
+        display: flex;
+        align-items: flex-start; /* Căn chỉnh theo chiều dọc */
+         position: relative;
+    transition: background-color 0.3s;
+      cursor: pointer;
+      padding: 2px;
+    }
+
+
+    .media img {
+        margin-right: 15px; /* Khoảng cách giữa ảnh và nội dung */
+        max-width: 100px; /* Điều chỉnh kích thước ảnh theo ý muốn */
+    }
+
+    .media-body {
+        flex: 1; /* Đảm bảo nội dung chiếm toàn bộ không gian còn lại */
+    }
+    .mr-3{
+border-radius: 8px;
+    }
+        </style>
+        <div>
+            <ul class="list-unstyled">
+                <t t-foreach="paginatedPosts" t-as="post" t-key="post.id">
+                    <li class="media" t-on-click="ev => handlePostClick(ev, post)">
+                        <img class="mr-3" t-att-src="post.imageUrl" alt="Ảnh bài viết"/>
+                        <div class="media-body">
+                            <h5 t-esc="post.title" class="mt-0 mb-1"></h5>
+                            <p t-esc="post.content"/>
+                            <p style="font-size: 10px;">
+                                <strong >Ngày tạo:</strong>
+                                <t t-esc="post.date"/>
+                            </p>
+                        </div>
+                    </li>
+                </t>
+            </ul>
+
+            <div t-if="state.showNew" class="survey-overlay">
+                <div class="survey-modal">
+
+                    <button type="button" class="close-button" t-on-click="closeModelNew">
+                        ×
+                    </button>
+                    <t t-if="state.selectedPost">
+                        <div class="post-info">
+                            <p>
+                                <strong>ID:</strong>
+                                <t t-esc="state.selectedPost.id"/>
+                            </p>
+                            <p>
+                                <strong>Tiêu đề:</strong>
+                                <t t-esc="state.selectedPost.title"/>
+                            </p>
+                            <p>
+                                <strong>Nội dung:</strong>
+                                <t t-esc="state.selectedPost.content"/>
+                            </p>
+                            <p>
+                                <strong>Ngày tạo:</strong>
+                                <t t-esc="state.selectedPost.date"/>
+                            </p>
+                            <img t-att-src="state.selectedPost.imageUrl" alt="Ảnh bài viết" style="max-width: 200px;"/>
+                        </div>
+                    </t>
+                </div>
+            </div>
+            <div class="d-inline-flex align-items-center justify-content-center gap-3">
+
+                <button t-on-click="prevPage" t-att-disabled="state.currentPage === 1" type="button" class="btn btn-light">
+                    Trang trước
+                </button>
+                <p class="text-muted mb-0">
+                    <t t-esc="state.currentPage"/>
+                    <span class="mx-1">/</span>
+                    <t t-esc="Math.ceil(state.data_post.length / pageSize)"/>
+                </p>
+
+                <button t-on-click="nextPage" t-att-disabled="state.currentPage * pageSize >= state.data_post.length" type="button" class="btn btn-light">
+                    Trang sau
+                </button>
+            </div>
+
+
+        </div>
+    </t>
+</templates>

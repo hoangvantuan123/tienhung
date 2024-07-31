@@ -1,0 +1,172 @@
+<odoo>
+    <data>
+        <!-- Form View for Payroll List -->
+        <record id="view_payroll_list_form" model="ir.ui.view">
+            <field name="name">payroll.list.form</field>
+            <field name="model">payroll.list</field>
+            <field name="arch" type="xml">
+                <form string="Payroll List">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="department_id"/>
+                            <field name="pass_type" widget='radio'/>
+                        </group>
+                        <notebook>
+                            <page string="List of assigned teams" name="report_list_of_assigned_teams">
+                                <field name="payroll_plan_ids" context="{'default_payroll_plan_id': active_id}">
+                                    <tree>
+                                        <field name="name" optional="show"/>
+                                        <field name="quantity" optional="show"/>
+                                    </tree>
+                                    <form string="Payroll Plan">
+                                        <group>
+                                            <field name="name" />
+                                            <field name="quantity"/>
+                                        </group>
+                                        <notebook>
+                                            <page string="List" name="report_list">
+                                                <field name="payroll_plan_work_id">
+                                                    <tree create="false">
+                                                        <field name="name" readonly="1" />
+                                                        <field name="total_sl" readonly="1"/>
+                                                        <field name="total_money" readonly="1"/>
+                                                    </tree>
+                                                    <form>
+                                                        <group>
+                                                            <field name="name" readonly="1" />
+                                                            <field name="total_sl" readonly="1"/>
+                                                            <field name="total_money" readonly="1"/>
+                                                        </group>
+                                                        <notebook>
+                                                            <page string="List" name="report_list">
+                                                                <field name="payroll_plan_work_sub_id">
+                                                                    <tree editable="bottom" create="false">
+                                                                        <field name="type"   optional="hide"/>
+                                                                        <field name="stage_type"  optional="hide" />
+                                                                        <field name="cd" invisible="stage_type != 'cut'"/>
+                                                                        <field name="cd_sew" invisible="stage_type != 'sew'"/>
+                                                                        <field name="sl" />
+                                                                        <field name="dg"/>
+                                                                        <field name="money"  optional="show"/>
+                                                                    </tree>
+                                                                </field>
+                                                            </page>
+                                                        </notebook>
+                                                    </form>
+                                                </field>
+                                            </page>
+                                        </notebook>
+                                    </form>
+                                </field>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <link rel="stylesheet" type="text/css" href="/x_plan/static/src/css/payroll_list_form.css"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_payroll_line_form" model="ir.ui.view">
+            <field name="name">payroll.line.form</field>
+            <field name="model">payroll.line</field>
+            <field name="arch" type="xml">
+                <form string="Payroll Line">
+
+                    <sheet>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="total_quantity" readonly="1"/>
+                            <field name="total_amount" readonly="1"/>
+                            <field name="create_date" readonly="1"/>
+                        </group>
+                        <group string="Work History">
+                            <field name="work_history_ids">
+                                <tree editable="bottom">
+                                    <field name="product_code"/>
+                                    <field name="work_step"/>
+                                    <field name="quantity"/>
+                                    <field name="unit_price"/>
+                                    <field name="amount" readonly="1"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="product_code"/>
+                                        <field name="work_step"/>
+                                        <field name="quantity"/>
+                                        <field name="unit_price"/>
+                                        <field name="amount" readonly="1"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree View for Payroll List -->
+        <record id="view_payroll_list_tree" model="ir.ui.view">
+            <field name="name">payroll.list.tree</field>
+            <field name="model">payroll.list</field>
+            <field name="arch" type="xml">
+                <tree string="Payroll Lists">
+                    <field name="name"/>
+                    <field name="department_id"/>
+                    <field name="pass_type"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Tree View for Payroll Line -->
+        <record id="view_payroll_line_tree" model="ir.ui.view">
+            <field name="name">payroll.line.tree</field>
+            <field name="model">payroll.line</field>
+            <field name="arch" type="xml">
+                <tree string="Payroll Lines">
+                    <field name="employee_id" readonly="1"/>
+                    <field name="total_quantity"/>
+                    <field name="total_amount"/>
+                </tree>
+            </field>
+
+        </record>
+        <record id="view_payroll_line_search" model="ir.ui.view">
+            <field name="name">payroll.line.search</field>
+            <field name="model">payroll.line</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="total_quantity"/>
+                    <field name="total_amount"/>
+                    <field name="create_date" string="Create Date"/>
+                    <field name="create_month_year"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Creation Month/Year" name="company_id" context="{'group_by':'create_month_year'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for Payroll List -->
+        <record id="action_payroll_list" model="ir.actions.act_window">
+            <field name="name">Payroll Lists</field>
+            <field name="res_model">payroll.list</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="action_payroll_line" model="ir.actions.act_window">
+            <field name="name">Payroll Lines</field>
+            <field name="res_model">payroll.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_payroll_line_tree"/>
+            <field name="search_view_id" ref="view_payroll_line_search"/>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="menu_payroll_root" name="Payroll" sequence="3"/>
+        <menuitem id="menu_payroll_list" name="Payroll Lists" parent="menu_payroll_root" action="action_payroll_list" sequence="4"/>
+        <menuitem id="menu_payroll_salary_list" name="Salary lists" parent="menu_payroll_root" action="action_payroll_line" sequence="5"/>
+    </data>
+</odoo>
+

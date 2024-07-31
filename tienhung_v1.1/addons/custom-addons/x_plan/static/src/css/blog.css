@@ -1,0 +1,72 @@
+/* CSS cho overlay khảo sát */
+.survey-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền mờ đen */
+    display: flex;
+    align-items: flex-start; /* Căn trên cùng để thêm khoảng cách từ trên cùng */
+    justify-content: center;
+    z-index: 1000; /* Đảm bảo overlay ở trên cùng */
+    overflow: hidden; /* Ngăn cuộn trang */
+}
+
+/* CSS cho modal khảo sát */
+.survey-modal {
+    background-color: white;
+    width: 100%;
+    height: calc(100% - 20%); /* Chiếm toàn bộ chiều cao màn hình trừ khoảng cách từ trên cùng */
+    max-width: 100%;
+    margin-top: 20%; /* Cách từ trên cùng 20% */
+    padding: 20px;
+    border-radius: 8px 8px 0 0; /* Bo tròn góc trên của modal */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Cho phép cuộn nội dung bên trong */
+    text-align: center;
+    position: relative; /* Để đặt nút đóng ở vị trí tuyệt đối */
+    box-sizing: border-box; /* Bao gồm padding trong kích thước */
+}
+
+/* CSS cho nút đóng */
+.survey-modal .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* CSS cho tiêu đề và các nút bên trong modal */
+.survey-modal h2 {
+    margin-top: 0;
+}
+
+.survey-modal button {
+    margin-top: 20px;
+}
+
+/* Media Queries cho các thiết bị di động */
+@media (max-width: 768px) {
+    .survey-modal {
+        height: calc(100% - 20%); /* Chiếm toàn bộ chiều cao màn hình trừ khoảng cách từ trên cùng */
+        margin-top: 20%; /* Cách từ trên cùng 20% */
+        padding: 15px; /* Giảm padding trên thiết bị di động */
+    }
+}
+
+@media (max-width: 480px) {
+    .survey-modal {
+        height: calc(100% - 20%); /* Chiếm toàn bộ chiều cao màn hình trừ khoảng cách từ trên cùng */
+        margin-top: 20%; /* Cách từ trên cùng 20% */
+        padding: 10px; /* Giảm padding thêm nữa trên thiết bị di động nhỏ */
+    }
+
+    .survey-modal .close-button {
+        font-size: 18px; /* Kích thước nút đóng nhỏ hơn trên thiết bị di động nhỏ */
+    }
+}

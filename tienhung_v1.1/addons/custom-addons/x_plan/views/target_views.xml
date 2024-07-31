@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+      
+     
+
+        <record id="view_target_form" model="ir.ui.view">
+            <field name="name">target.form</field>
+            <field name="model">target</field>
+            <field name="arch" type="xml">
+                <form string="Target">
+                    <sheet>
+                        <group>
+                            <field name="user_id"  readonly="1"/>
+                            <field name="target_stage_id"  readonly="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <field name="target_value"/>
+                                </group>
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_target_tree" model="ir.ui.view">
+            <field name="name">target.tree</field>
+            <field name="model">target</field>
+            <field name="arch" type="xml">
+                <tree string="Target">
+                    <field name="plan_id" optional="show"/>
+                    <field name="target_value" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_target" model="ir.actions.act_window">
+            <field name="name">Targets</field>
+            <field name="res_model">target</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

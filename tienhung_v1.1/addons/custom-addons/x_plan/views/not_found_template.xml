@@ -1,0 +1,15 @@
+<!-- static/src/xml/not_found_template.xml -->
+<?xml version="1.0"?>
+<odoo>
+    <template id="x_plan.not_found_template">
+        <t t-name="not_found_template">
+            <div class="oe_structure">
+                <div class="oe_structure_content">
+                    <div class="alert alert-danger">
+                        <strong>Not Found!</strong> The performance record you are looking for does not exist.
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

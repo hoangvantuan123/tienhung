@@ -1,0 +1,151 @@
+<odoo>
+    <data>
+
+        <record id="view_warehouse_stock_tree" model="ir.ui.view">
+            <field name="name">warehouse.stock.tree</field>
+            <field name="model">warehouse.stock</field>
+            <field name="arch" type="xml">
+                <tree string="Warehouse Stock">
+                    <field name="department_id" optional="show"/>
+                    <field name="name" optional="show"/>
+                    <field name="po" optional="show"/>
+                    <field name="product_color" optional="show"/>
+                    <field name="port" optional="show"/>
+                    <field name="product_size" optional="show"/>
+                    <field name="quantity_received" optional="show"/>
+                    <field name="accumulated_quantity" optional="show"/>
+                    <field name="total_size_qty" optional="show"/>
+                    <field name="target_status"  optional="hide" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_warehouse_stock_form" model="ir.ui.view">
+            <field name="name">warehouse.stock.form</field>
+            <field name="model">warehouse.stock</field>
+            <field name="arch" type="xml">
+                <form string="Warehouse Stock">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                                <field name="name" options="{'no_create': True}" class="oe_inline" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Basic Information" col="2">
+                                <field name="department_id" />
+                                <field name="po" domain="[('x_plan_csv_id', '=', name)]" options="{'no_create': True}" />
+                                <field name="product_color" />
+                                <field name="port" />
+                                <field name="product_size" />
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Stock Details" col="2">
+                                <field name="quantity_received" />
+                                <field name="total_size_qty" />
+                                <field name="accumulated_quantity" />
+                                <field name="target_status" widget="statusbar" statusbar_colors='{"achieved": "green", "not_achieved": "red"}' />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_warehouse_stock_kanban" model="ir.ui.view">
+            <field name="name">warehouse.stock.kanban</field>
+            <field name="model">warehouse.stock</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_view">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_content">
+                                <div class="oe_kanban_global_click">
+                                    <div class="oe_kanban_image">
+                                        <field name="product_color"/>
+                                        <field name="product_size"/>
+                                        <field name="port"/>
+                                    </div>
+                                    <div class="oe_kanban_details">
+                                        <strong>
+                                            <field name="name"/>
+                                        </strong>
+                                        <div>
+                                            <field name="quantity_received"/>
+                                        </div>
+                                        <div>
+                                            <field name="accumulated_quantity"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_warehouse_stock_report_graph" model="ir.ui.view">
+            <field name="name">warehouse.stock.report.graph</field>
+            <field name="model">warehouse.stock</field>
+            <field name="arch" type="xml">
+                <graph string="Warehouse Stock Report" type="bar">
+                    <field name="name" type="row"/>
+                    <field name="product_color" type="row" />
+                    <field name="product_size" type="row"/>
+                    <field name="accumulated_quantity" type="measure" />
+                </graph>
+            </field>
+        </record>
+
+
+        <record id="view_report_warehouse_sub_graph" model="ir.ui.view">
+            <field name="name">report.warehouse.graph</field>
+            <field name="model">report.warehouse</field>
+            <field name="arch" type="xml">
+                <graph string="Report Warehouse" type="bar">
+                    <field name="plan" type="row"/>
+                    <field name="po" type="row" />
+                    <field name="total_unit_price" type="measure"/>
+                    <field name="total_price" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_warehouse_stock_report_graph" model="ir.actions.act_window">
+            <field name="name">Warehouse Stock Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">warehouse.stock</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_warehouse_stock_report_graph"/>
+        </record>
+        <record id="action_report_warehouse_sub_graph" model="ir.actions.act_window">
+            <field name="name">Report Warehouse</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.warehouse</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_report_warehouse_sub_graph"/>
+        </record>
+
+        <record id="action_warehouse_stock" model="ir.actions.act_window">
+            <field name="name">Warehouse</field>
+            <field name="res_model">warehouse.stock</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_id" ref="view_warehouse_stock_tree"/>
+        </record>
+
+
+
+        <!-- Menu root -->
+        <menuitem id="menu_warehouse_root" name="Warehouse" sequence="4" />
+        <menuitem id="menu_report_dashboard_sub" name="Dashboard" parent="menu_warehouse_root" sequence="13"/>
+        <!-- Submenu cho Kanban view -->
+        <menuitem id="menu_warehouse_overview_sub" name="Kho hàng" parent="menu_warehouse_root" action="action_warehouse_stock" sequence="10"/>
+
+        <menuitem id="menu_report_dashboard_sub_sub" name="Warehouse import report" parent="menu_report_dashboard_sub" sequence="13" action="action_warehouse_stock_report_graph"/>
+        <menuitem id="menu_report_warehouse_sub_sub_sub" name="Daily productivity reports" parent="menu_report_dashboard_sub" sequence="13" action="action_report_warehouse_sub_graph"/>
+    </data>
+</odoo>

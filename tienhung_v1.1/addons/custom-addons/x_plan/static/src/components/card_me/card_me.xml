@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.CardMe" owl="1">
+        <dl class="info-list row" >
+            <div class="row">
+                <dt class="col-sm-3 font-weight-bold text-dark border-bottom-custom">Họ tên: </dt>
+                <dd class="col-sm-9">Trần Đạt</dd>
+            </div>
+            <div class="row">
+                <dt class="col-sm-3 font-weight-bold text-dark border-bottom-custom">Vị trí: </dt>
+                <dd class="col-sm-9">IT - Tiên Hưng - IP 24121988</dd>
+            </div>
+            <div class="row">
+                <dt class="col-sm-3 font-weight-bold text-dark border-bottom-custom">Số điện thoại:</dt>
+                <dd class="col-sm-9">
+                   0393141483
+                </dd>
+            </div>
+            <div class="row">
+                <dt class="col-sm-3 font-weight-bold text-dark border-bottom-custom">Email:</dt>
+                <dd class="col-sm-9">
+                   trandat1988.it@gmail.com
+                </dd>
+            </div>
+           
+        </dl>
+    </t>
+</templates>

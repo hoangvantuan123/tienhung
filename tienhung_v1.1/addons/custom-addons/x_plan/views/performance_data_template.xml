@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="x_plan.performance_data_template">
+        <div class="vh-100 overflow-auto bg-muted">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="my-custom-table table text-center">
+                            <thead>
+                                <tr class="text-center">
+                                    <th scope="col">LINE</th>
+                                    <th scope="col">DATE</th>
+                                    <th scope="col">
+                                        <t t-esc="performance_record.name"/>
+                                    </th>
+                                    <th scope="col">TIME</th>
+                                    <th scope="col">
+                                        <t t-esc="performance_record.stage"/>
+                                    </th>
+                                    <th scope="col">WORKER</th>
+                                    <th scope="col">
+                                        <t t-esc="performance_record.operation"/>
+                                    </th>
+                                    <th scope="col">ABSENT</th>
+                                    <th scope="col">
+                                        <t t-esc="performance_record.team"/>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="b-20">
+                                <tr class="text-center">
+                                    <th scope="row" rowspan="2">
+                                        <t t-esc="performance_record.plan"/>
+                                    </th>
+                                    <td>STYLE</td>
+                                    <td colspan="3">
+                                        <t t-esc="performance_record.performance_value"/>
+                                    </td>
+                                    <td>COLOR</td>
+                                    <td colspan="3">#</td>
+                                </tr>
+                                <tr class="text-center bg-primary text-white">
+                                    <th scope="row">#</th>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row" class="text-center bg-primary text-white">T.HIỆN/NGÀY(PCS)</th>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                </tr>
+                                <tr class="text-center">
+                                    <th scope="row" class="text-center bg-primary text-white">LUỸ KẾ(PCS)</th>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                    <td>#</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">BIỂU ĐỒ NĂNG SUẤT CỤM</th>
+                                    <td colspan="8">
+                                        <div class="chart-container">
+                                            <canvas id="performanceChart"></canvas>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <link rel="stylesheet" type="text/css" href="/x_plan/static/src/css/styles_table.css"/>
+        <script type="text/javascript" src="/x_plan/static/src/js/performance_chart.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+        
+    </template>
+</odoo>

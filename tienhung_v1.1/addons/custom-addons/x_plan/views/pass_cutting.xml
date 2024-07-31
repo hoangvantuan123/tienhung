@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_pass_cutting_tree">
+            <field name="name">pass.cutting.tree</field>
+            <field name="model">pass.cutting</field>
+            <field name="arch" type="xml">
+                <tree string="Pass Cutting">
+                    <field name="stt" />
+                    <field name="name" optional="show"/>
+                    <field name="worker_type" optional="show"/>
+                    <field name="total_time" optional="show"/>
+                    <field name="total_cost" optional="show"/>
+                    <field name="employee_count" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_cutting_line_tree">
+            <field name="name">cutting.line.tree</field>
+            <field name="model">cutting.line</field>
+            <field name="arch" type="xml">
+                <tree string="Cutting Line">
+                    <field name="stt"/>
+                    <field name="name"/>
+                    <field name="equipment" optional="show"/>
+                    <field name="worker_type" optional="show"/>
+                    <field name="current_s" optional="show"/>
+                    <field name="total_time" optional="show"/>
+                    <field name="total_direct_cost" optional="show"/>
+                    <field name="employee_count" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_pass_cutting_form" model="ir.ui.view">
+            <field name="name">pass.cutting.form.custom</field>
+            <field name="model">pass.cutting</field>
+            <field name="arch" type="xml">
+                <form string="Pass Cutting">
+                    <sheet>
+                        <group string="Basic Information" class="oe_primary">
+                            <field name="stt"/>
+                            <field name="name" />
+                            <field name="worker_type"/>
+                            <field name="stage_id" invisible="1"/>
+
+                        </group>
+
+                        <group string="Time and Cost" class="oe_secondary">
+                            <group>
+                                <field name="total_time"/>
+                            </group>
+                            <group>
+                                <field name="total_cost"/>
+                            </group>
+                        </group>
+
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_cutting_line_form" model="ir.ui.view">
+            <field name="name">cutting.line.form.custom</field>
+            <field name="model">cutting.line</field>
+            <field name="arch" type="xml">
+                <form string="Cutting Line">
+                    <sheet>
+                        <!-- Basic Information -->
+                        <group class="oe_primary">
+                            <group string="General Information">
+                                <field name="stt"/>
+                                <field name="name"/>
+                                <field name="stage_id" invisible="1"/>
+                            </group>
+                            <group string="Worker Information">
+                                <field name="worker_type"/>
+                                <field name="current_s"/>
+                            </group>
+                            <group string="Cost Information">
+                                <field name="total_time"/>
+                                <field name="total_direct_cost"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Work Process" icon="fa-history">
+                                <field name="work_process_id" mode="tree,form">
+                                    <tree>
+                                        <field name="work_step" />
+                                        <field name="name"/>
+                                        <field name="stage"/>
+                                        <field name="unit_price"/>
+                                        <field name="product_code"/>
+                                        <field name="team"/>
+                                        <field name="duration"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Cost History" icon="fa-history">
+                                <field name="total_cost_history_ids">
+                                    <tree>
+                                        <field name="change_date"/>
+                                        <field name="unit_price_05"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+
+</odoo>
+
+

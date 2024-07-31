@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  odoo17:
+    image: odoo:17
+    ports:
+      - "8080:8069"
+    tty: true
+    environment:
+      - HOST=103.167.198.18
+      - USER=tienhung
+      - PASSWORD=tienhung-admin@admin.com
+      - DB_NAME=tienhung
+    volumes:
+      - ./addons:/mnt/extra-addons
+      - ./addons/custom_addons:/mnt/extra-addons/custom-addons
+      - ./etc:/etc/odoo
+    restart: always
+    command: ["odoo", "--config=/etc/odoo/odoo.conf"]

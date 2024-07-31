@@ -1,0 +1,16 @@
+<odoo>
+   <!--  <record id="group_warehouse_manager" model="res.groups">
+        <field name="name">Warehouse Manager</field>
+        <field name="category_id" ref="base.module_category_inventory"/>
+    </record>
+
+    <record id="access_warehouse_manager" model="ir.model.access">
+        <field name="name">Warehouse Manager Access</field>
+        <field name="model_id" ref="model_warehouse_stock"/>
+        <field name="groups" eval="[(4, ref('warehouse_stock.group_warehouse_manager'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record> -->
+</odoo>

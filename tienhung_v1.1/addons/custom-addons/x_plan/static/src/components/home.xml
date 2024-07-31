@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="x_plan.Home" owl="1">
+
+        <div class="vh-100 d-flex flex-column bg-muted">
+            <div class="d-flex flex-column flex-grow-1 overflow-auto">
+                <div class="row m-3">
+                    <div class="col-lg-8 d-flex flex-column">
+                        <div class="row flex-grow-1">
+                            <div class="col m-0 p-0">
+                                <div class="m-2 p-3">
+                                    <div class="d-flex-col" style="display: flex; flex-direction: column;">
+                                        <h1 class="fw-bold" style="font-size: 20px;">👋 Chào mừng đến với Tiên Hưng.</h1>
+                                        <p class="leading-relaxed text-gray-500">
+                                            Cảm ơn bạn đã cùng công ty Tiên Hưng chung tay xây dựng môi trường chuyện nghiệp an toàn.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row flex-grow-1">
+                            <CardUserCoutOnl name="'Online Users'" t-props="{
+                                        online_count: state.userStatusCounts.online_count
+                                    }"/>
+                            <CardUserCoutOff name="'Offline Count'" t-props="{
+                                        offline_count: state.userStatusCounts.offline_count
+                                    }"/>
+                            <CardUserCoutOnl name="'Total number of employees'" t-props="{
+                                         online_count: state.userStatusCounts.online_count
+                                    }"/>
+                            <CardUserCoutOnl name="'Ratio of agree and disagree'" t-props="{
+                                       online_count: state.userStatusCounts.online_count
+                                    }"/>
+                        </div>
+                        <div class="row flex-grow-1">
+                            <div class="col-lg-12 m-0 p-0">
+                                <div class="shadow-sm border m-2 p-4 bg-white" style="border-radius: 10px;">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h3 class="fw-bold">Tin tức và Sự kiện</h3>
+                                    </div>
+                                    <New/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex flex-column">
+                        <div class="row">
+                            <div class="col m-0 p-0">
+                                <div class="shadow-sm border m-2 p-4 bg-white" style="border-radius: 10px;">
+                                    <CardMe/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class='row'>
+                            <div class="col m-0 p-0">
+                                <div class="shadow-sm border m-2 p-4 bg-white" style="border-radius: 10px;">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h3 class="fw-bold">Danh sách khảo sát</h3>
+                                    </div>
+                                    <Blog />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <!-- Phần tử trống tạo khoảng cách 20px từ đáy -->
+            <div style="height: 20px;"></div>
+        </div>
+    </t>
+</templates>

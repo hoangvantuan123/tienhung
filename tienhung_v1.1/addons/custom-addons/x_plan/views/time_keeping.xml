@@ -1,0 +1,168 @@
+<odoo>
+    <data>
+        <record id="view_timekeeping_list_form" model="ir.ui.view">
+            <field name="name">timekeeping.list.form</field>
+            <field name="model">timekeeping.list</field>
+            <field name="arch" type="xml">
+                <form string="Timekeeping List">
+                    <sheet>
+                        <group>
+                            <group string="General Information">
+                                <field name="name" invisible="1"/>
+                                <field name="department_id"/>
+                                <field name="create_date"/>
+                                <field name="create_month_year"/>
+                            </group>
+                            <group string="Vacation Status Counts">
+                                <field name="present_count"/>
+                                <field name="half_day_count"/>
+                                <field name="absent_count"/>
+                                <field name="vacation_status_p_count"/>
+                                <field name="vacation_status_ro_count"/>
+                                <field name="vacation_status_r_count"/>
+                                <field name="vacation_status_o_count"/>
+                                <field name="vacation_status_co_count"/>
+                                <field name="vacation_status_bo_count"/>
+                                <field name="vacation_status_d_count"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Employees" name="employee_list">
+                                <field name="timekeeping_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="employee_card" readonly="1"/>
+                                        <field name="employee_id" />
+                                        <field name="present"/>
+                                        <field name="half_day"/>
+                                        <field name="absent"/>
+                                        <field name="vacation_status" />
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_timekeeping_list_kanban" model="ir.ui.view">
+            <field name="name">timekeeping.list.kanban</field>
+            <field name="model">timekeeping.list</field>
+            <field name="arch" type="xml">
+                <kanban string="Timekeeping List">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click o_kanban_record #kanban_color">
+
+                                <div class="o_kanban_details">
+                                    <field name="name"/>
+                                    <div>
+                                        <strong>Department:</strong>
+                                        <field name="department_id"/>
+                                    </div>
+                                    <div>
+                                        <strong>Created On:</strong>
+                                        <field name="create_date"/>
+                                    </div>
+                                    <div>
+                                        <strong>Month/Year:</strong>
+                                        <field name="create_month_year"/>
+                                    </div>
+                                    <div class="o_kanban_tags">
+                                        <span class="o_tag">
+                                            <strong>Full Day:</strong>
+                                            <field name="present_count"/>
+                                        </span>
+                                        <span class="o_tag">
+                                            <strong>Half Day:</strong>
+                                            <field name="half_day_count"/>
+                                        </span>
+                                        <span class="o_tag">
+                                            <strong>Absent:</strong>
+                                            <field name="absent_count"/>
+                                        </span>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_timekeeping_line_form" model="ir.ui.view">
+            <field name="name">timekeeping.line.form</field>
+            <field name="model">timekeeping.line</field>
+            <field name="arch" type="xml">
+                <form string="Timekeeping Line">
+                    <sheet>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="create_date"/>
+                            <field name="create_month_year"/>
+                        </group>
+                        <group>
+                            <field name="present"/>
+                            <field name="half_day"/>
+                            <field name="absent"/>
+                            <field name="vacation_status" />
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_timekeeping_list_tree" model="ir.ui.view">
+            <field name="name">timekeeping.list.tree</field>
+            <field name="model">timekeeping.list</field>
+            <field name="arch" type="xml">
+                <tree string="Timekeeping Lists">
+                    <field name="name" optional="show"/>
+                    <field name="create_date" optional="show"/>
+                    <field name="present_count" optional="show"/>
+                    <field name="half_day_count" optional="show"/>
+                    <field name="absent_count" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_timekeeping_line_tree" model="ir.ui.view">
+            <field name="name">timekeeping.line.tree</field>
+            <field name="model">timekeeping.line</field>
+            <field name="arch" type="xml">
+                <tree string="Timekeeping Lines">
+                    <field name="employee_id" readonly="1" optional="show"/>
+                    <field name="present" optional="show"/>
+                    <field name="half_day" optional="show"/>
+                    <field name="absent" optional="show"/>
+                    <field name="vacation_status" optional="show"/>
+                    <field name="note" optional="show"/>
+                </tree>
+            </field>
+
+        </record>
+
+
+        <record id="action_timekeeping_list" model="ir.actions.act_window">
+            <field name="name">Timekeeping Lists</field>
+            <field name="res_model">timekeeping.list</field>
+            <field name="view_mode">tree,kanban,form</field>
+        </record>
+
+        <record id="action_timekeeping_line" model="ir.actions.act_window">
+            <field name="name">Timekeeping Lines</field>
+            <field name="res_model">timekeeping.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_timekeeping_line_tree"/>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="menu_timekeeping_root" name="Timekeeping" sequence="5"/>
+        <menuitem id="menu_timekeeping_list" name="Timekeeping Lists" parent="menu_timekeeping_root" action="action_timekeeping_list" sequence="2"/>
+    </data>
+</odoo>
+

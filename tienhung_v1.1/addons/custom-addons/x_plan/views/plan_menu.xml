@@ -1,0 +1,93 @@
+<odoo>
+  <data>
+
+    <record id="action_stage_cut" model="ir.actions.act_window">
+      <field name="name">Cut Stages</field>
+      <field name="res_model">stage</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('stage_type','=','cut')]</field>
+      <field name="context">{'create': False}</field>
+    </record>
+
+    <record id="action_stage_sewing" model="ir.actions.act_window">
+      <field name="name">Sewing Stages</field>
+      <field name="res_model">stage</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('stage_type','=','sew')]</field>
+      <field name="context">{'create': False}</field>
+    </record>
+    <!-- Product Style -->
+
+    <record id="action_product_style_i_x" model="ir.actions.act_window">
+      <field name="name">Actions Import/Export</field>
+      <field name="res_model">product</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!--pass.cutting  -->
+    <record id="action_pass_cutting_i_x" model="ir.actions.act_window">
+      <field name="name">Actions Import/Export</field>
+      <field name="res_model">pass.cutting</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('stage_id', '=', active_id)]</field>
+    </record>
+
+    <!-- actions Cutting line   -->
+    <record id="action_cutting_line_i_x" model="ir.actions.act_window">
+      <field name="name">Actions Import/Export</field>
+      <field name="res_model">cutting.line</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('stage_id', '=', active_id)]</field>
+    </record>
+
+
+    <!-- Action  Work Process -->
+    <record id="action_work_process" model="ir.actions.act_window">
+      <field name="name">Work Process</field>
+      <field name="res_model">work.process</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_work_process_form" model="ir.actions.act_window">
+      <field name="name">Work Process</field>
+      <field name="res_model">work.process</field>
+      <field name="view_mode">form</field>
+      <field name="context">{'default_stage_id':active_id }</field>
+    </record>
+    <!-- Actions Work Process Pass Cutting -->
+    <record id="action_work_process_pass_cutting" model="ir.actions.act_window">
+      <field name="name">Work Process</field>
+      <field name="res_model">work.pass.cutting</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+    <record id="action_work_process_form_pass_cutting" model="ir.actions.act_window">
+      <field name="name">Work Process</field>
+      <field name="res_model">work.pass.cutting</field>
+      <field name="view_mode">form</field>
+      <field name="context">{'default_stage_id':active_id }</field>
+      <field name="domain">[('stage_id', '=', active_id)]</field>
+    </record>
+
+
+
+
+
+    <record id="action_target_form" model="ir.actions.act_window">
+      <field name="name">Target</field>
+      <field name="res_model">target</field>
+      <field name="view_mode">form</field>
+    </record>
+
+
+   
+    <menuitem id="menu_x_plan_root" name="Planning" sequence="3"/>
+    <menuitem id="menu_x_plan_production_process_root" name="Production Process" parent="menu_x_plan_root" sequence="10" />
+    <menuitem id="menu_x_plan_pass_cutting_sub" name="Pass Cutting" parent="menu_x_plan_production_process_root" sequence="10" action="action_stage_cut"/>
+    <menuitem id="menu_x_plan_sewing_line_sub" name="Sewing Line" parent="menu_x_plan_production_process_root" sequence="10" action="action_stage_sewing"/>
+  </data>
+</odoo>
+
+

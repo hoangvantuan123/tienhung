@@ -1,0 +1,32 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_x_plan_manager,Manage Plan X,model_x_plan,base.group_user,1,1,1,1
+access_product_manager,Product Style,model_product,base.group_user,1,1,1,1
+access_stage_manager,Stage in Plan,model_stage,base.group_user,1,1,1,1
+access_pass_cutting_manager,Pass Cutting,model_pass_cutting,base.group_user,1,1,1,1
+access_pass_cutting_history_manager,Pass Cutting History,model_pass_cutting_history,base.group_user,1,1,1,1
+access_cutting_line_manager,Cutting Line,model_cutting_line,base.group_user,1,1,1,1
+access_cutting_line_history_manager,Cutting Line History,model_cutting_line_history,base.group_user,1,1,1,1
+access_work_process_cutting_line_manager,Work Process,model_work_process,base.group_user,1,1,1,1
+access_work_process_pass_cutting_manager,Work Process Pass Cutting,model_work_pass_cutting,base.group_user,1,1,1,1
+access_warehouse_stock_manager,Warehouse Stock Information,model_warehouse_stock,base.group_user,1,1,1,1
+access_target_manager,Target,model_target,base.group_user,1,1,1,1
+access_payroll_list,Payroll List,model_payroll_list,base.group_user,1,1,1,1
+access_payroll_line,Payroll Line,model_payroll_line,base.group_user,1,1,1,1
+access_employee_work_history,Employee Work History,model_employee_work_history,base.group_user,1,1,1,1
+access_dashboard_performance,Dashboard Performance,model_dashboard_performance,base.group_user,1,1,1,1
+access_time_keeping_manager,Timekeeping List,model_timekeeping_list,base.group_user,1,1,1,1
+access_time_keeping_line_manager,Timekeeping Line,model_timekeeping_line,base.group_user,1,1,1,1
+access_stage_team_manager,Stage Team List,model_stageteam_list,base.group_user,1,1,1,1
+access_stage_line_manager,Stage Line,model_stage_line,base.group_user,1,1,1,1
+access_work_process_pass_cutting_sub_manager,Work Process Pass Cutting Sub,model_work_pass_cutting_sub,base.group_user,1,1,1,1
+access_work_process_cutting_line_sub_manager,Work Process Cutting Sub,model_work_process_cutting_sub,base.group_user,1,1,1,1
+access_assign_more_work_manager,Assign More Work,model_assign_more_work,base.group_user,1,1,1,1
+access_assign_more_work_sub,Assign More Work Sub,model_assign_more_work_sub,base.group_user,1,1,1,1
+access_productivity_reports_manager,Productivity Reports,model_productivity_reports,base.group_user,1,1,1,1
+access_report_warehouse_manager,Report Warehouse,model_report_warehouse,base.group_user,1,1,1,1
+access_report_warehouse_sub,Report Warehouse Sub,model_report_warehouse_sub,base.group_user,1,1,1,1
+access_payroll_plan,Payroll plan,model_payroll_plan,base.group_user,1,1,1,1
+access_payroll_works,Payroll plan Work,model_payroll_plan_work,base.group_user,1,1,1,1
+access_payroll_works_sub,Payroll Plan Work Sub,model_payroll_plan_work_sub,base.group_user,1,1,1,1
+access_work_process_pass_cutting_wizard,Work Process Pass Cutting Wizard,model_work_process_pass_cutting_wizard,base.group_user,1,1,1,1
+access_work_process_sew_wizard,Work Process Sew Wizard,model_work_process_sew_wizard,base.group_user,1,1,1,1

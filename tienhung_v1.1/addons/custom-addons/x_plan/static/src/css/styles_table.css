@@ -1,0 +1,62 @@
+/* static/src/css/custom_styles.css */
+
+.vh-100 {
+    height: 100vh; /* Chiều cao 100% của viewport */
+}
+
+.overflow-auto {
+    overflow: auto; /* Cho phép cuộn khi nội dung vượt quá kích thước */
+}
+
+.bg-muted {
+    background-color: #f0f0f0; /* Màu nền xám nhạt */
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.my-custom-table {
+    width: 100%; /* Bảng chiếm toàn bộ chiều rộng của container */
+    margin-bottom: 1rem;
+    color: #212529;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+.my-custom-table th,
+.my-custom-table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.my-custom-table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.my-custom-table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.chart-container {
+    width: 100%; /* Đảm bảo biểu đồ chiếm hết phần nội dung */
+    height: 300px; /* Thiết lập chiều cao của biểu đồ */
+    margin: auto;
+}

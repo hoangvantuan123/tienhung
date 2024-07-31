@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="action_home_dashboard" model="ir.actions.client">
+            <field name="name">Home</field>
+            <field name="tag">x_plan.home</field>
+        </record>
+        <menuitem name="Home" id="menu_home_view" sequence="1" action="action_home_dashboard"/>
+    </data>
+</odoo>

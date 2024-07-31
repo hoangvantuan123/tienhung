@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.CardUserCoutOnl" owl="1">
+        <div class="col-lg-3 m-0 p-0">
+            <div class="shadow-sm border m-2 p-3 bg-white text-center" style="border-radius: 10px;">
+                <div class="h1 fw-bold text-success" style="font-size: 30px"><span t-esc="props.online_count"/></div>
+                <div class="h3 text-muted" style="font-size: 13px"><span t-esc="props.name"/></div>
+            </div>
+        </div>
+    </t>
+</templates>

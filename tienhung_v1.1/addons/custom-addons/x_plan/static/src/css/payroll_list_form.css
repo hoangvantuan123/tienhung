@@ -1,0 +1,27 @@
+/* Căn giữa form view */
+.form-view {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Chiếm toàn bộ chiều cao của màn hình */
+}
+
+/* Thiết kế cho header payroll */
+.payroll-header {
+    display: flex;
+    justify-content: center; /* Căn giữa các box theo chiều ngang */
+    align-items: center; /* Căn giữa các box theo chiều dọc */
+    padding: 20px; /* Khoảng cách lề ngoài */
+    background-color: #f2f2f2; /* Màu nền */
+    gap: 0 20px;
+}
+
+/* Thiết kế cho từng box field */
+.payroll-header .field {
+    border: 1px solid #ccc; /* Độ dày và màu sắc của border */
+    padding: 10px; /* Khoảng cách lề bên trong */
+    margin: 10px; /* Khoảng cách giữa các box */
+    width: 30%; /* Độ rộng của từng box */
+    text-align: center; /* Căn giữa nội dung trong box */
+    background-color: #fff; /* Màu nền của box */
+}

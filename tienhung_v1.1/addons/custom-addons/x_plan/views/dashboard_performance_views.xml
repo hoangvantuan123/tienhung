@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="view_dashboard_performance_tree" model="ir.ui.view">
+            <field name="name">dashboard.performance.tree</field>
+            <field name="model">dashboard.performance</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="plan"/>
+                    <field name="stage"/>
+                    <field name="operation"/>
+                    <field name="team"/>
+                    <field name="performance_value"/>
+                    <button name="action_open_performance_form" type="object" string="Open Performance Form" icon="fa-hand-pointer-o">
+                        <field name="id" invisible="1"/>
+                    </button>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_dashboard_performance_form" model="ir.ui.view">
+            <field name="name">dashboard.performance.form</field>
+            <field name="model">dashboard.performance</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="plan"/>
+                            <field name="stage"/>
+                            <field name="operation"/>
+                            <field name="team"/>
+                            <field name="performance_value"/>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- Graph View -->
+        <record id="view_dashboard_performance_graph" model="ir.ui.view">
+            <field name="name">dashboard.performance.graph</field>
+            <field name="model">dashboard.performance</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="name" type="row"/>
+                    <field name="performance_value" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Action: List View -->
+        <record id="action_dashboard_performance_list" model="ir.actions.act_window">
+            <field name="name">Dashboard Performance</field>
+            <field name="res_model">dashboard.performance</field>
+            <field name="view_mode">tree,form,graph</field>
+        </record>
+
+        <!-- Action: Dashboard View -->
+        <record id="action_dashboard_performance_dashboard" model="ir.actions.client">
+            <field name="name">View Dashboard</field>
+            <field name="tag">dash.performance_dashboard</field>
+            <field name="params">{'active_id': active_id}</field>
+        </record>
+
+      
+        <!-- Menu Items -->
+        <menuitem id="menu_dashboard_performance_root" name="Dashboard Performance" sequence="6"/>
+        <menuitem id="menu_dashboard_performance_list" name="Overview" parent="menu_dashboard_performance_root" action="action_dashboard_performance_list" sequence="2"/>
+
+    </data>
+</odoo>

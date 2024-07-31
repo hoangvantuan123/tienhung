@@ -1,0 +1,149 @@
+<odoo>
+    <data>
+        <record id="view_work_process_pass_cutting_sub_wizard_form" model="ir.ui.view">
+            <field name="name">work.process.pass.cutting.wizard.form</field>
+            <field name="model">work.process.pass.cutting.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Select Pass Cuttings">
+                    <sheet>
+                        <group>
+                            <field name="pass_cutting_ids" widget='many2many' options="{'no_create': True}" />
+                        </group>
+                        <footer>
+                            <button string="Apply" type="object" name="action_apply" class="btn-primary" />
+                            <button string="Cancel" class="btn-secondary" special="cancel" />
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_work_sew_sub_wizard_form" model="ir.ui.view">
+            <field name="name">work.process.sew.wizard.form</field>
+            <field name="model">work.process.sew.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Select">
+                    <sheet>
+                        <group>
+                            <field name="cutting_ids" widget='many2many' options="{'no_create': True}" />
+                        </group>
+                        <footer>
+                            <button string="Apply" type="object" name="action_apply" class="btn-primary" />
+                            <button string="Cancel" class="btn-secondary" special="cancel" />
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="action_work_process_pass_cutting_sub_wizard" model="ir.actions.act_window">
+            <field name="name">Select Pass Cuttings</field>
+            <field name="res_model">work.process.pass.cutting.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_work_process_pass_cutting_sub_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+        <record id="action_work_sew_sub_wizard" model="ir.actions.act_window">
+            <field name="name">Select</field>
+            <field name="res_model">work.process.sew.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_work_sew_sub_wizard_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_form_work_process" model="ir.ui.view">
+            <field name="name">work.process.form</field>
+            <field name="model">work.process</field>
+            <field name="arch" type="xml">
+                <form string="Work Process Cutting Line" class="oe_form_container">
+                    <sheet>
+                        <group string="Related Information">
+                            <field name="name" readonly="1" />
+                            <field name="employee_card_number" readonly="1" />
+                            <field name="unit_price" readonly="1" />
+                        </group>
+                        <notebook>
+                            <page string="Cutting" name="cutting_work_page">
+                                <header>
+                                    <button name="%(action_work_sew_sub_wizard)d" type="action" string="Add steps" icon="fa-plus" />
+                                </header>
+                                <field name="work_sub_ids">
+                                    <tree create="false">
+                                        <field name="cutting_id"/>
+                                        <field name="unit_price"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_cutting_work_sub" model="ir.ui.view">
+            <field name="name">work.process.cutting.sub.form</field>
+            <field name="model">work.process.cutting.sub</field>
+            <field name="arch" type="xml">
+                <form string="Cutting Work">
+                    <sheet>
+                        <group >
+                            <field name="stage_id" readonly="1"/>
+                            <field name="cutting_id" domain="[('stage_id', '=', stage_id)]" readonly="1"/>
+                            <field name="unit_price" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_form_pass_cutting_work_sub" model="ir.ui.view">
+            <field name="name">work.pass.cutting.sub.form</field>
+            <field name="model">work.pass.cutting.sub</field>
+            <field name="arch" type="xml">
+                <form string="Pass Cutting">
+                    <sheet>
+                        <group >
+                            <field name="stage_id" readonly="1" />
+                            <field name="pass_cutting_id" domain="[('stage_id', '=', stage_id)]" readonly="1"/>
+                            <field name="unit_price" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Form view -->
+        <record id="view_form_work_process_pass_cutting" model="ir.ui.view">
+            <field name="name">work.pass.cutting.form</field>
+            <field name="model">work.pass.cutting</field>
+            <field name="arch" type="xml">
+                <form string="Work Process Pass Cutting" class="oe_form_container">
+                    <sheet>
+                        <group string="Related Information">
+                            <field name="name" readonly="1" />
+                            <field name="employee_card_number" readonly="1" />
+                            <field name="unit_price" readonly="1" />
+                        </group>
+                        <notebook>
+                            <page string="Pass Cutting" name="pass_cutting_work_page">
+                                <header>
+                                    <button name="%(action_work_process_pass_cutting_sub_wizard)d" type="action" string="Add steps" icon="fa-plus" />
+                                </header>
+                                <field name="work_sub_ids">
+                                    <tree create="false">
+                                        <field name="pass_cutting_id" optional="show"/>
+                                        <field name="unit_price" optional="show" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+
+
+
+    </data>
+</odoo>

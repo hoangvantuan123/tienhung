@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Kanban View -->
+        <record id="view_plan_kanban" model="ir.ui.view">
+            <field name="name">x.plan.kanban</field>
+            <field name="model">x.plan</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile" sample="1">
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="status"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click o_kanban_card">
+                                <div class="o_kanban_image">
+                                    <field name="image" widget="image" class="oe_avatar"/>
+                                </div>
+                                <div class="o_kanban_content">
+                                    <div class="o_kanban_header">
+                                        <strong class="o_kanban_title">
+                                            <field name="name"/>
+                                        </strong>
+                                        <span class="o_kanban_separator">-</span>
+                                        <strong class="o_kanban_customer">
+                                            <field name="customer"/>
+                                        </strong>
+                                    </div>
+                                    <t t-if="record.status.value">
+                                        <div class="o_kanban_status">
+                                            <hr class="o_kanban_hr"/>
+                                            <field name="status"/>
+                                        </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Calendar View -->
+        <record id="view_plan_calendar" model="ir.ui.view">
+            <field name="name">x.plan.calendar</field>
+            <field name="model">x.plan</field>
+            <field name="arch" type="xml">
+                <calendar string="x Plans" date_start="start_date" date_stop="end_date">
+                    <field name="name"/>
+                    <field name="customer"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_x_stage_tree" model="ir.ui.view">
+            <field name="name">stage.tree</field>
+            <field name="model">stage</field>
+            <field name="arch" type="xml">
+                <tree string="Stages">
+                    <field name="name" optional="show"/>
+                    <field name="department_id" options="{'no_create': True}" optional="hide"/>
+                    <field name="stage_type" optional="show"/>
+                    <field name="total_quantity_per_team" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_product_po_tree" model="ir.ui.view">
+            <field name="name">product.tree</field>
+            <field name="model">product</field>
+            <field name="arch" type="xml">
+                <tree string="PO">
+                    <field name="style_name" optional="show"/>
+                    <field name="po" optional="show"/>
+                    <field name="ngay_kiem_1" optional="show"/>
+                    <field name="ngay_kiem_2" optional="show"/>
+                    <field name="colors" optional="show"/>
+                    <field name="port" optional="show"/>
+                    <field name="xxs" optional="hide"/>
+                    <field name="xs" optional="hide"/>
+                    <field name="s" optional="hide"/>
+                    <field name="m" optional="hide"/>
+                    <field name="l" optional="hide"/>
+                    <field name="xl" optional="hide"/>
+                    <field name="xxl" optional="hide"/>
+                    <field name="x2l" optional="hide"/>
+                    <field name="x3l" optional="hide"/>
+                    <field name="t2" optional="hide"/>
+                    <field name="t3" optional="hide"/>
+                    <field name="t4" optional="hide"/>
+                    <field name="t5" optional="hide"/>
+                    <field name="m12" optional="hide"/>
+                    <field name="m18" optional="hide"/>
+                    <field name="total_sizes" optional="show"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Tree view -->
+        <record id="view_tree_work_process" model="ir.ui.view">
+            <field name="name">work.process.tree</field>
+            <field name="model">work.process</field>
+            <field name="arch" type="xml">
+                <tree string="Work Process">
+                    <field name="name"/>
+                    <field name="stage"/>
+                    <field name="completed"/>
+                    <field name="to_be_completed"/>
+                    <field name="unit_price"/>
+                    <field name="product_code"/>
+                    <field name="team"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="duration"/>
+                    <field name="cutting_line_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_tree_work_process_pass_cutting" model="ir.ui.view">
+            <field name="name">work.pass.cutting.tree</field>
+            <field name="model">work.pass.cutting</field>
+            <field name="arch" type="xml">
+                <tree string="Work Process">
+                    <field name="name"/>
+                    <field name="unit_price"/>
+                    <field name="duration"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

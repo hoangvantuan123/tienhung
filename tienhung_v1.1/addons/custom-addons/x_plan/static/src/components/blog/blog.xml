@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.Blog" owl="1">
+        <style>
+            /* CSS cho overlay khảo sát */
+            .survey-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.7); /* Nền mờ đen */
+                display: flex;
+                align-items: flex-start; 
+                z-index: 1000; 
+                overflow: hidden; 
+            }
+
+            .survey-modal {
+                background-color: white;
+                width: 100%;
+                height: 100%; 
+                max-width: 100%;
+                margin-top: 8%; 
+                padding: 20px;
+                border-radius: 10px 10px 0 0;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                overflow-y: auto; 
+                position: relative; 
+                box-sizing: border-box; 
+            }
+
+            /* CSS cho nút đóng */
+            .survey-modal .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+                color: #333;
+            }
+
+            /* CSS cho tiêu đề và các nút bên trong modal */
+            .survey-modal h2 {
+                margin-top: 0;
+            }
+
+            .survey-modal button {
+                margin-top: 20px;
+            }
+
+            /* Media Queries cho các thiết bị di động */
+            @media (max-width: 768px) {
+                .survey-modal {
+                    height: 100%; /* Chiếm toàn bộ chiều cao màn hình trừ khoảng cách từ trên cùng */
+                    margin-top: 20%; /* Cách từ trên cùng 20% */
+                    padding: 15px; /* Giảm padding trên thiết bị di động */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .survey-modal {
+                    height: 100%; /* Chiếm toàn bộ chiều cao màn hình trừ khoảng cách từ trên cùng */
+                    margin-top: 20%; /* Cách từ trên cùng 20% */
+                    padding: 10px; /* Giảm padding thêm nữa trên thiết bị di động nhỏ */
+                }
+
+                .survey-modal .close-button {
+                    font-size: 18px; /* Kích thước nút đóng nhỏ hơn trên thiết bị di động nhỏ */
+                }
+            }
+            .custom-header {
+        font-size: 20px; 
+        text-align: center; 
+        margin: 0; 
+        padding: 20px; 
+        color: #333; 
+        
+    }
+    .custom-h5 {
+    font-size: 16px; 
+    font-weight: 400; 
+    text-align: left; 
+    margin-bottom: 1rem; 
+     font-style: italic;
+}
+        </style>
+
+        <div >
+            <ul class="list-unstyled">
+                <t t-foreach="paginatedSurvey" t-as="survey" t-key="survey.id">
+                    <li class="media" t-on-click="ev => handleSurveyClick(ev, survey)">
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-4 custom-h5">
+                                <span class="survey-prefix"> - </span>
+                                <t t-esc="survey.title"/>
+
+                            </h5>
+                        </div>
+                    </li>
+                </t>
+            </ul>
+
+            <!-- Form khảo sát -->
+            <div t-if="state.showSurvey" class="survey-overlay">
+                <div class="survey-modal">
+                    <button type="button" class="close-button" t-on-click="closeModelSurvey">
+                        ×
+                    </button>
+                    <t t-if="state.selectedSurvey">
+                        <h2 class="custom-header">
+                            <t t-esc="state.selectedSurvey.title"/>
+                        </h2>
+                        <t t-if="state.selectedSurvey.questions.length > 0">
+                            <form t-on-submit.prevent="onSubmit">
+                                <t t-foreach="state.selectedSurvey.questions" t-as="question" t-key="question.id">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <t t-esc="`Question: ${question.id} - ${question.question}`"/>
+                                        </label>
+                                        <!-- <label t-esc="question.question"/> -->
+                                        <t t-if="question.type === 'multiple-choice'">
+                                            <div class="form-check" t-foreach="question.options" t-as="option" t-key="option">
+                                                <input type="checkbox" t-att-id="'option_' + option" t-att-value="option" t-model="question.selectedOptions" />
+                                                <label t-att-for="'option_' + option" class="form-check-label" t-esc="option"/>
+                                            </div>
+                                        </t>
+                                        <t t-if="question.type === 'yes-no'">
+                                            <div class="form-check">
+                                                <input type="radio" t-att-id="'yes_' + question.id" t-att-value="'Yes'" name="question_" t-model="question.answer" />
+                                                <label t-att-for="'yes_' + question.id" class="form-check-label">Yes</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="radio" t-att-id="'no_' + question.id" t-att-value="'No'" name="question_" t-model="question.answer" />
+                                                <label t-att-for="'no_' + question.id" class="form-check-label">No</label>
+                                            </div>
+                                        </t>
+                                        <t t-if="question.type === 'text'">
+                                            <textarea class="form-control" t-att-id="'text_' + question.id" t-model="question.answer" />
+                                        </t>
+                                    </div>
+                                </t>
+                                <!--   <button type="submit" class="btn btn-primary">Submit</button> -->
+                            </form>
+                        </t>
+                    </t>
+                </div>
+            </div>
+
+
+
+            <div class="d-inline-flex align-items-center justify-content-center gap-3">
+
+                <button t-on-click="prevPageSurvey" t-att-disabled="state.currentPage === 1" type="button" class="btn btn-light">
+                    Trang trước
+                </button>
+                <p class="text-muted mb-0">
+                    <t t-esc="state.currentPage"/>
+                    <span class="mx-1">/</span>
+                    <t t-esc="Math.ceil(state.data_survey.length / pageSize)"/>
+                </p>
+
+                <button t-on-click="nextPageSurvey" t-att-disabled="state.currentPage * pageSize >= state.data_survey.length" type="button" class="btn btn-light">
+                    Trang sau
+                </button>
+            </div>
+        </div>
+
+    </t>
+</templates>

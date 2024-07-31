@@ -1,0 +1,147 @@
+<odoo>
+    <data>
+        <!-- View form for Stage -->
+        <record model="ir.ui.view" id="view_stage_form">
+            <field name="name">stage.form.view</field>
+            <field name="model">stage</field>
+            <field name="arch" type="xml">
+                <form string="Stage Form">
+                    <sheet>
+                        <group>
+                            <group string="General Information">
+                                <field name="stage_type" widget='radio'/>
+                                <field name="description"/>
+                            </group>
+                            <group string="Quantity">
+                                <field name="total_quantity_per_team"/>
+                            </group>
+
+                        </group>
+                        <notebook>
+                            <page string="Pass Cutting" name="pass_cutting_page" invisible="stage_type != 'cut'">
+                                <header>
+                                    <button name="%(action_pass_cutting_i_x)d" string="Actions" type="action" icon="fa-external-link" />
+                                </header>
+                                <field name="pass_cutting_ids">
+                                    <tree string="Pass Cutting">
+                                        <field name="stt" optional="show"/>
+                                        <field name="name" optional="show"/>
+                                        <field name="worker_type" optional="show"/>
+                                        <field name="total_time" optional="show"/>
+                                        <field name="total_cost" optional="show"/>
+                                        <field name="employee_count" optional="show"/>
+                                    </tree>
+                                    <form string="Pass Cutting Details" create="false">
+                                        <group string="Basic Information" class="oe_primary">
+                                            <field name="stt"/>
+                                            <field name="name"/>
+                                            <field name="worker_type"/>
+                                        </group>
+                                        <group string="Time and Cost" class="oe_secondary">
+                                            <group>
+                                                <field name="total_time"/>
+                                            </group>
+                                            <group>
+                                                <field name="total_cost"/>
+                                            </group>
+                                        </group>
+
+                                    </form>
+                                </field>
+
+                            </page>
+                            <page string="Teams" name="stageteam_id_page" invisible="stage_type != 'cut'">
+                                <field name="stageteam_ids">
+                                    <tree string="Teams">
+                                        <field name="name" optional="hide"/>
+                                        <field name="department_id" optional="show"/>
+                                        <field name="stageteam_line_ids" optional="show"/>
+                                        <field name="stage_id" optional="hide"/>
+                                        <field name="quantity_per_team" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Work List" name="pass_cutting_assignment_page" invisible="stage_type != 'cut'">
+                                <field name="work_sub_filtered_cut_ids">
+                                    <tree create="false">
+                                        <field name="employee_card_number" optional="show"/>
+                                        <field name="name" optional="show"/>
+                                        <field name="unit_price" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            
+
+
+                            <page string="Cutting Line" name="cutting_line_page" invisible="stage_type != 'sew'">
+                                <header>
+                                    <button name="%(action_cutting_line_i_x)d" string="Actions" type="action" icon="fa-external-link" />
+                                </header>
+
+                                <field name="cutting_line_ids">
+                                    <tree string="Cutting Line">
+                                        <field name="stt" optional="show"/>
+                                        <field name="name" optional="show"/>
+                                        <field name="equipment" optional="show"/>
+                                        <field name="worker_type" optional="show"/>
+                                        <field name="total_time" optional="show"/>
+                                        <field name="total_direct_cost" optional="show"/>
+                                        <field name="employee_count" optional="show"/>
+                                    </tree>
+                                    <form string="Cutting Details" create="false">
+                                        <group class="oe_primary">
+                                            <group string="General Information">
+                                                <field name="stt"/>
+                                                <field name="name"/>
+                                                <field name="stage_id" invisible="1"/>
+                                            </group>
+                                            <group string="Worker Information">
+                                                <field name="equipment"/>
+                                                <field name="worker_type"/>
+                                                <field name="employee_count" />
+                                            </group>
+                                            <group string="Cost Information">
+                                                <field name="total_time"/>
+                                                <field name="total_direct_cost"/>
+                                            </group>
+                                        </group>
+
+                                    </form>
+
+                                </field>
+                            </page>
+                            <page string="Teams" name="stageteam_id_page" invisible="stage_type != 'sew'">
+                                <field name="stageteam_ids">
+                                    <tree string="Teams">
+                                        <field name="name" optional="hide"/>
+                                        <field name="department_id" optional="show"/>
+                                        <field name="stageteam_line_ids" optional="show"/>
+                                        <field name="stage_id" optional="hide"/>
+                                        <field name="quantity_per_team" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Work List" name="cutting_line_assignment_page" invisible="stage_type != 'sew'">
+                                <field name="work_sub_filtered_sew_ids">
+                                    <tree create="false">
+                                        <field name="employee_card_number" optional="show"/>
+                                        <field name="name" optional="show"/>
+                                        <field name="unit_price" optional="show"/>
+                                    </tree>
+                                </field>
+                            </page>
+                           
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_work_process_form_stage_team_list" model="ir.actions.act_window">
+            <field name="name">Work Process</field>
+            <field name="res_model">work.pass.cutting</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'default_stageteam_line_id': active_id}</field>
+        </record>
+    </data>
+</odoo>

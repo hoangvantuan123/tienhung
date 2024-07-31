@@ -1,0 +1,9 @@
+.o_list_view .o_data_row.o_data_cell_decoration_available {
+    background-color: #d4edda; /* Green background for achieved */
+}
+.o_list_view .o_data_row.o_data_cell_decoration_info {
+    background-color: #fff3cd; /* Yellow background for not achieved */
+}
+.o_list_view .o_data_row.o_data_cell_decoration_danger {
+    background-color: #f8d7da; /* Red background for error */
+}

@@ -1,0 +1,1779 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* x_plan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-17 00:21+0000\n"
+"PO-Revision-Date: 2024-07-17 00:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_kanban
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_producing_kanban
+msgid ""
+"<strong>\n"
+"                                        -\n"
+"                                        </strong>"
+msgstr ""
+"<strong>\n"
+"-\n"
+"</strong>"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_kanban
+msgid "<strong>Absent:</strong>"
+msgstr "<strong> Vắng mặt: </strong>"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_kanban
+msgid "<strong>Created On:</strong>"
+msgstr "<strong> Được tạo trên: </strong>"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_kanban
+msgid "<strong>Department:</strong>"
+msgstr "<strong> Bộ phận: </strong>"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_kanban
+msgid "<strong>Full Day:</strong>"
+msgstr "<strong> Cả ngày: </strong>"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_kanban
+msgid "<strong>Half Day:</strong>"
+msgstr "<strong> Nửa ngày: </strong>"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_kanban
+msgid "<strong>Month/Year:</strong>"
+msgstr "<strong> Tháng/Năm: </strong>"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "ABSENT"
+msgstr "VẮNG MẶT"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__absent
+msgid "Absent"
+msgstr "Vắng mặt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__absent_count
+msgid "Absent Count"
+msgstr "Số lượng vắng mặt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__accumulated_quantity
+msgid "Accumulated Quantity"
+msgstr "Số lượng tích lũy"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__warehouse_stock__target_status__achieved
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__target_status__achieved
+msgid "Achieved"
+msgstr "Đạt được"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_target__achieved_value
+msgid "Achieved Value"
+msgstr "Đạt được giá trị"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Actions"
+msgstr "Hành động"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_cutting_line_i_x
+#: model:ir.actions.act_window,name:x_plan.action_pass_cutting_i_x
+#: model:ir.actions.act_window,name:x_plan.action_product_style_i_x
+msgid "Actions Import/Export"
+msgstr " Hành Động Nhập/Xuất"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_target_form_stage_team_list
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_list_form
+msgid "Add Target"
+msgstr "Thêm mục tiêu"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_list_form
+msgid "Add Work Cut"
+msgstr "Thêm công việc cắt"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_list_form
+msgid "Add Work Sew"
+msgstr "Thêm công việc may"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__allowance_cd
+msgid "Allowance CD"
+msgstr "CD phụ cấp"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__amount
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__total_amount
+msgid "Amount"
+msgstr "Số lượng"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__status__analyzing
+msgid "Analyzing"
+msgstr "Phân tích"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_assign_more_work
+#: model:ir.model,name:x_plan.model_assign_more_work
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__assign_more_work_id
+#: model:ir.ui.menu,name:x_plan.menu_assign_more_work_root
+msgid "Assign More Work"
+msgstr "Giao thêm công việc"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_assign_more_work_sub
+msgid "Assign More Work Sub"
+msgstr "Phân công thêm công việc phụ"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__assign_more_work_sub_ids
+msgid "Assign More Work sub Lines"
+msgstr "Phân công thêm công việc phụ"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__assistant
+msgid "Assistant"
+msgstr "Trợ lý"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__assistant_percent
+msgid "Assistant %"
+msgstr "Trợ lý %"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "BIỂU ĐỒ NĂNG SUẤT CỤM"
+msgstr "Biểu Đồ Năn Suất Cụm"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__timekeeping_line__vacation_status__bo
+msgid "BO"
+msgstr "BO"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_bo_count
+msgid "BO Count"
+msgstr "BO Count"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_pass_cutting_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_warehouse_stock_form
+msgid "Basic Information"
+msgstr "Thông tin cơ bản"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__timekeeping_line__vacation_status__co
+msgid "CO"
+msgstr "CO"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_co_count
+msgid "CO Count"
+msgstr "CO số lượng"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "COLOR"
+msgstr "MÀU SẮC"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__status__cancelled
+msgid "Cancelled"
+msgstr "Bị hủy bỏ"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__change_date
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__change_date
+msgid "Change Date"
+msgstr "Thay đổi ngày"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__colors
+msgid "Colors"
+msgstr "Màu sắc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__completed
+#: model:ir.model.fields,field_description:x_plan.field_work_process__completed
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__status__completed
+msgid "Completed"
+msgstr "Hoàn thành"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__computed_total_duration
+msgid "Computed Total Duration (hours)"
+msgstr "Tổng thời gian tính toán (giờ)"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__contract_price
+msgid "Contract Price ($)"
+msgstr "Giá hợp đồng ($)"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_pass_cutting_form
+msgid "Cost History"
+msgstr "Lịch sử chi phí"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Cost Information"
+msgstr "Thông tin chi phí"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_line_search
+msgid "Create Date"
+msgstr "Thời gian tạo"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_product__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_stage__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_target__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_process__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__create_uid
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__create_date
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__create_date
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__create_date
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__create_date
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__create_date
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__create_date
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__create_date
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__create_date
+#: model:ir.model.fields,field_description:x_plan.field_product__create_date
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__create_date
+#: model:ir.model.fields,field_description:x_plan.field_stage__create_date
+#: model:ir.model.fields,field_description:x_plan.field_target__create_date
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__create_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__create_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__create_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process__create_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__create_date
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__create_date
+msgid "Created on"
+msgstr "Được tạo ra"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__create_date
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__create_date
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__create_date
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__create_date
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__create_date
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__create_date
+msgid "Creation Date"
+msgstr "Ngày thành lập"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__create_month_year
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__create_month_year
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__create_month_year
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__create_month_year
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_line_search
+msgid "Creation Month/Year"
+msgstr "Tháng/năm sáng tạo"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__customer
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__assign_more_work__stage_type__cut
+#: model:ir.model.fields.selection,name:x_plan.selection__assign_more_work_sub__stage_type__cut
+#: model:ir.model.fields.selection,name:x_plan.selection__stage__stage_type__cut
+#: model:ir.model.fields.selection,name:x_plan.selection__stage_line__stage_type__cut
+msgid "Cut"
+msgstr "Cắt"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_stage_cut
+msgid "Cut Stages"
+msgstr "Cắt giai đoạn"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__cutting_id
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__cutting_id
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__cutting_id
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_work_sew
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_work_process
+msgid "Cutting"
+msgstr "Cắt"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_cutting_line
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__cutting_line_id
+#: model:ir.model.fields,field_description:x_plan.field_stage__cutting_line_ids
+#: model:ir.model.fields,field_description:x_plan.field_work_process__cutting_line_id
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_line_tree
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Cutting Line"
+msgstr "Cutting Line"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_cutting_line_history
+msgid "Cutting Line History"
+msgstr "Lịch sử chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__cutting_line_work_id
+#: model:ir.ui.menu,name:x_plan.menu_productivity_reports_views_sub_sub_cut
+msgid "Cutting Line Work"
+msgstr "Công việc Cắt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__cutting_line_work_sub_id
+msgid "Cutting Line Work Sub"
+msgstr "Cutting Line Work Sub"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_work_pass_cutting_productivity_reports
+msgid "Cutting Line Works"
+msgstr "Công việc chuyền Cắt"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_work_sub
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_work_sew
+msgid "Cutting Work"
+msgstr "Công việc chuyền Cắt"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "DATE"
+msgstr "NGÀY"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_dashboard_performance_list
+#: model:ir.model,name:x_plan.model_dashboard_performance
+#: model:ir.ui.menu,name:x_plan.menu_dashboard_performance_root
+msgid "Dashboard Performance"
+msgstr "Hiệu suất bảng điều khiển"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/xml/dashboard_performance_template.xml:0
+#, python-format
+msgid "Dashboard Performance Details"
+msgstr "Chi tiết hiệu suất bảng điều khiển"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__new_date
+msgid "Date Added"
+msgstr "Ngày thêm"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__department_id
+#: model:ir.model.fields,field_description:x_plan.field_stage__department_id
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__department_id
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__department_id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__department_id
+#: model:ir.model.fields,field_description:x_plan.field_work_process__department_id
+msgid "Department"
+msgstr "Phòng"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__description
+#: model:ir.model.fields,field_description:x_plan.field_target__description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_target_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_target_stage_form
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__display_name
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__display_name
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__display_name
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__display_name
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__display_name
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__display_name
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__display_name
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__display_name
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__display_name
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__display_name
+#: model:ir.model.fields,field_description:x_plan.field_product__display_name
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__display_name
+#: model:ir.model.fields,field_description:x_plan.field_stage__display_name
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__display_name
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__display_name
+#: model:ir.model.fields,field_description:x_plan.field_target__display_name
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__display_name
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__display_name
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__display_name
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__display_name
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__display_name
+#: model:ir.model.fields,field_description:x_plan.field_work_process__display_name
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__display_name
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__duration
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__duration
+#: model:ir.model.fields,field_description:x_plan.field_work_process__duration
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__duration
+msgid "Duration"
+msgstr "Khoảng thời gian"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__employee_id
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__name
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__employee_id
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__employee_id
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__new_employee_card_number
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__employee_card
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__employee_card
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__employee_card_number
+#: model:ir.model.fields,field_description:x_plan.field_work_process__employee_card_number
+msgid "Employee Card Number"
+msgstr "Số thẻ nhân viên"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__employee_count
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__employee_count
+msgid "Employee Count"
+msgstr "Số nhân viên"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__employee_details
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__employee_details
+msgid "Employee Details"
+msgstr "Thông tin nhân viên"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_target__user_id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__name
+#: model:ir.model.fields,field_description:x_plan.field_work_process__employee_name
+#: model:ir.model.fields,field_description:x_plan.field_work_process__name
+msgid "Employee Name"
+msgstr "Tên nhân viên"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_employee_work_history
+msgid "Employee Work History"
+msgstr "Lịch sử làm việc của nhân viên"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_list_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_form
+msgid "Employees"
+msgstr "Nhân viên"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_target__end_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__end_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__end_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process__end_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__end_date
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__end_date
+msgid "End Date"
+msgstr "Ngày cuối"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__end_time
+msgid "End Time"
+msgstr "Thời gian kết thúc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__equipment
+msgid "Equipment"
+msgstr "Thiết bị"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__quantity_per_team
+msgid "Execution Quantity per Team"
+msgstr "Số lượng thực thi cho mỗi đội"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+msgid "Financial Information"
+msgstr "Thông tin tài chính"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__present
+msgid "Full Day"
+msgstr "Cả ngày"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_list_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_form
+msgid "General Information"
+msgstr "Thông tin chung"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_line_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__half_day
+msgid "Half Day"
+msgstr "Nửa ngày"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__half_day_count
+msgid "Half Dayt"
+msgstr "Nửa ngày"
+
+#. module: x_plan
+#: model:ir.actions.client,name:x_plan.action_home_dashboard
+#: model:ir.ui.menu,name:x_plan.menu_home_view
+msgid "Home"
+msgstr "Trang chủ"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__id
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__id
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__id
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__id
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__id
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__id
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__id
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__id
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__id
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__id
+#: model:ir.model.fields,field_description:x_plan.field_product__id
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__id
+#: model:ir.model.fields,field_description:x_plan.field_stage__id
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__id
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__id
+#: model:ir.model.fields,field_description:x_plan.field_target__id
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__id
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__id
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__id
+#: model:ir.model.fields,field_description:x_plan.field_work_process__id
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__id
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__id
+msgid "ID"
+msgstr "NHẬN DẠNG"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__image
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__status__warehouse
+msgid "In Warehouse"
+msgstr "Nhà kho"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "LINE"
+msgstr "LINE"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "LUỸ KẾ(PCS)"
+msgstr "Luỹ Kế(PCS)"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_product__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_stage__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_target__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_process__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__write_uid
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__write_date
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__write_date
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__write_date
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__write_date
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__write_date
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__write_date
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__write_date
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__write_date
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__write_date
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__write_date
+#: model:ir.model.fields,field_description:x_plan.field_product__write_date
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__write_date
+#: model:ir.model.fields,field_description:x_plan.field_stage__write_date
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__write_date
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__write_date
+#: model:ir.model.fields,field_description:x_plan.field_target__write_date
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__write_date
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__write_date
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__write_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__write_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__write_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process__write_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__write_date
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_tree
+msgid "Manage Plan"
+msgstr "Quản lý kế hoạch"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_x_plan
+msgid "Manage Plan X"
+msgstr "Quản lý Kế hoạch X Tiên Hưng"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__manufacturing_price
+msgid "Manufacturing Price (VND)"
+msgstr "Giá sản xuất (VNĐ)"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__name
+#: model:ir.model.fields,field_description:x_plan.field_product__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__name
+msgid "New staff"
+msgstr "Nhân viên"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__ngay_kiem_1
+msgid "Ngày kiểm 1"
+msgstr "Ngày Kiểm 1"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__ngay_kiem_2
+msgid "Ngày kiểm 2"
+msgstr "Ngày Kiểm 2"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__warehouse_stock__target_status__not_achieved
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__target_status__not_achieved
+msgid "Not Achieved"
+msgstr "Không đạt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_oo_count
+msgid "O Count"
+msgstr "O số lượng"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__timekeeping_line__vacation_status__oo
+msgid "OO"
+msgstr "OO"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_o_count
+msgid "OO Count"
+msgstr "Số lượng OO"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_dashboard_performance_tree
+msgid "Open Performance Form"
+msgstr "Mở mẫu hiệu suất"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__operation
+msgid "Operation"
+msgstr "Hoạt động"
+
+#. module: x_plan
+#: model:ir.ui.menu,name:x_plan.menu_assign_more_work_sub
+#: model:ir.ui.menu,name:x_plan.menu_dashboard_performance_list
+#: model:ir.ui.menu,name:x_plan.menu_productivity_reports_views_sub
+#: model:ir.ui.menu,name:x_plan.menu_warehouse_overview_sub
+msgid "Overview"
+msgstr "Tổng quan"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_p_count
+msgid "P Count"
+msgstr "P Count"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__unit_price_05
+msgid "P/C Unit Price 0.5"
+msgstr "Đơn giá P/C 0.5"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__po
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_product_po_tree
+msgid "PO"
+msgstr "PO"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__po
+msgid "PO Number"
+msgstr "Số PO"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__port
+msgid "PORT"
+msgstr "PORT"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_pass_cutting
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__pass_cutting_id
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__pass_cutting_id
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__pass_cutting_id
+#: model:ir.model.fields,field_description:x_plan.field_stage__pass_cutting_ids
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__pass_cutting_id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__pass_cutting_id
+#: model:ir.ui.menu,name:x_plan.menu_x_plan_pass_cutting_sub
+#: model_terms:ir.ui.view,arch_db:x_plan.view_assign_more_work_tree
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_pass_cutting
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_work_process_pass_cutting
+#: model_terms:ir.ui.view,arch_db:x_plan.view_pass_cutting_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_pass_cutting_tree
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Pass Cutting"
+msgstr "Chuyền Cắt"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Pass Cutting Details"
+msgstr "Thông tin chi tiết Chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_pass_cutting_history
+msgid "Pass Cutting History"
+msgstr "Lịch sử Chuyền Cắt"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_pass_cutting_work_sub
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_pass_cutting
+msgid "Pass Cutting Work"
+msgstr "Công việc Chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__payroll_id
+#: model:ir.ui.menu,name:x_plan.menu_payroll_root
+msgid "Payroll"
+msgstr "Lương"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_payroll_line
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__payroll_line_id
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_line_form
+msgid "Payroll Line"
+msgstr "Dòng tiền lương"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_payroll_line
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__payroll_line_ids
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_line_tree
+msgid "Payroll Lines"
+msgstr "Dòng tiền lương"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_payroll_list
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_list_form
+msgid "Payroll List"
+msgstr "Danh sách bảng lương"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_payroll_list
+#: model:ir.ui.menu,name:x_plan.menu_payroll_list
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_list_tree
+msgid "Payroll Lists"
+msgstr "Danh sách bảng lương"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__name
+msgid "Payroll Name"
+msgstr "Tên bảng lương"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__performance_value
+msgid "Performance Value"
+msgstr "Giá trị hiệu suất"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__plan_id
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__plan
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__plan_id
+#: model:ir.model.fields,field_description:x_plan.field_stage__x_plan_id
+#: model:ir.model.fields,field_description:x_plan.field_target__plan_id
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__name
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__x_plan_id
+msgid "Plan"
+msgstr "Kế hoạch"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__x_plan_csv_id
+msgid "Plan CSV"
+msgstr "Kế hoạch"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+msgid "Plan Form"
+msgstr "Biểu mẫu kế hoạch"
+
+#. module: x_plan
+#: model:res.groups,name:x_plan.group_x_plan_manager
+msgid "Plan Manager"
+msgstr "Quản lý kế hoạch"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__status
+msgid "Plan Status"
+msgstr "Trạng thái kế hoạch"
+
+#. module: x_plan
+#: model:res.groups,name:x_plan.group_x_plan_user
+msgid "Plan User"
+msgstr "Kế hoạch người dùng"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__status__planning
+#: model:ir.ui.menu,name:x_plan.menu_x_plan_root
+msgid "Planning"
+msgstr "Lập kế hoạch"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__x_stage_ids
+msgid "Planning Stages"
+msgstr "Giai đoạn lập kế hoạch"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_x_plan
+#: model:ir.ui.menu,name:x_plan.menu_x_plan
+msgid "Plans"
+msgstr "Kế hoạch"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__assign_more_work__stage_type__prepare
+#: model:ir.model.fields.selection,name:x_plan.selection__assign_more_work_sub__stage_type__prepare
+#: model:ir.model.fields.selection,name:x_plan.selection__stage__stage_type__prepare
+#: model:ir.model.fields.selection,name:x_plan.selection__stage_line__stage_type__prepare
+msgid "Prepare"
+msgstr "Chuẩn bị"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__present_count
+msgid "Present Count"
+msgstr "Số lượng hiện tại"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_warehouse_stock_form
+msgid "Price Calculation"
+msgstr "Tính giá"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_warehouse_stock_form
+msgid "Pricing"
+msgstr "Giá cả"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_warehouse_stock_form
+msgid "Pricing Information"
+msgstr "Thông tin về giá"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__status__producing
+msgid "Producing"
+msgstr "Sản xuất"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__product_code
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__product_code
+#: model:ir.model.fields,field_description:x_plan.field_work_process__product_code
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__name
+msgid "Product Code"
+msgstr "Mã sản phẩm"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__product_color
+msgid "Product Color"
+msgstr "Màu sản phẩm"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__product_image
+msgid "Product Image"
+msgstr "Hình ảnh sản phẩm"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__product_size
+msgid "Product Size"
+msgstr "Kích thước sản phẩm"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_product
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_product_style
+msgid "Product Style"
+msgstr "Kiểu sản phẩm"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__product_style_ids
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+msgid "Product Styles"
+msgstr "Kiểu sản phẩm"
+
+#. module: x_plan
+#: model:ir.ui.menu,name:x_plan.menu_x_plan_production_process_root
+msgid "Production Process"
+msgstr "Quy trình sản xuất"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_productivity_reports_form_cut
+#: model_terms:ir.ui.view,arch_db:x_plan.view_productivity_reports_form_sew
+msgid "Productivity Report"
+msgstr "Báo cáo năng suất"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_productivity_reports_form_cut
+#: model:ir.actions.act_window,name:x_plan.action_productivity_reports_form_sew
+#: model:ir.actions.act_window,name:x_plan.action_work_productivity_reports_from
+#: model:ir.model,name:x_plan.model_productivity_reports
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__productivity_reports_ids
+#: model:ir.model.fields,field_description:x_plan.field_work_process__productivity_reports_ids
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__productivity_reports_ids
+msgid "Productivity Reports"
+msgstr "Báo cáo năng suất"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__quantity
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__quantity
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__quantity_received
+msgid "Quantity Received"
+msgstr "Số lượng nhận vào"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_r_count
+msgid "R Count"
+msgstr "R Đếm"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__timekeeping_line__vacation_status__ro
+msgid "RO"
+msgstr "RO"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_ro_count
+msgid "RO Count"
+msgstr "RO Count"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__x_plan__status__received
+msgid "Received Information"
+msgstr "Thông tin đã nhận"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/xml/dashboard_performance_template.xml:0
+#, python-format
+msgid "Record Name:"
+msgstr "Tên bản ghi:"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_pass_cutting
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_work_sew
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_work_process
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_work_process_pass_cutting
+msgid "Related Information"
+msgstr "Thông tin liên quan"
+
+#. module: x_plan
+#: model:ir.ui.menu,name:x_plan.menu_report_sub
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_pass_cutting
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_work_sew
+msgid "Report"
+msgstr "Báo cáo"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_pass_cutting
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_work_sew
+msgid "Report History"
+msgstr "Lịch sử báo cáo"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__stt
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__stt
+msgid "STT"
+msgstr "STT"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "STYLE"
+msgstr "STYLE"
+
+#. module: x_plan
+#: model:ir.ui.menu,name:x_plan.menu_payroll_salary_list
+msgid "Salary lists"
+msgstr "Danh sách lương"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__season
+msgid "Season"
+msgstr "Mùa"
+
+#. module: x_plan
+#: model:ir.model.fields.selection,name:x_plan.selection__assign_more_work__stage_type__sew
+#: model:ir.model.fields.selection,name:x_plan.selection__assign_more_work_sub__stage_type__sew
+#: model:ir.model.fields.selection,name:x_plan.selection__stage__stage_type__sew
+#: model:ir.model.fields.selection,name:x_plan.selection__stage_line__stage_type__sew
+msgid "Sew"
+msgstr "May"
+
+#. module: x_plan
+#: model:ir.ui.menu,name:x_plan.menu_x_plan_sewing_line_sub
+msgid "Sewing Line"
+msgstr "Chuyền May"
+
+#. module: x_plan
+#: model:ir.ui.menu,name:x_plan.menu_productivity_reports_views_sub_sew
+msgid "Sewing Line Work"
+msgstr "Công việc chuyền May"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_work_sewing_productivity_reports
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__sewing_line_work_id
+msgid "Sewing Line Works"
+msgstr "Công việc chuyền May"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__sewing_line_work_sub_id
+msgid "Sewing Line Works Sub"
+msgstr "Công việc chuyền May Sub"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_stage_sewing
+msgid "Sewing Stages"
+msgstr "Giai đoạn may"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_product_style
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+msgid "Sizes"
+msgstr "Kích thước"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__stage
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_productivity_reports__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_target__target_stage_id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_work_process__stage
+#: model:ir.model.fields,field_description:x_plan.field_work_process__stage_id
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__stage_id
+msgid "Stage"
+msgstr "Giai đoạn"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Stage Form"
+msgstr "Form Giai Đoạn"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_stage_line
+msgid "Stage Line"
+msgstr "Giai đoạn"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__name
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__name
+msgid "Stage Name"
+msgstr "Tên giai đoạn"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__stageteam_ids
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__stageteam_id
+msgid "Stage Team"
+msgstr "Team"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_target__target_stage_line_id
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__work_stage_passcutting_line_id
+#: model:ir.model.fields,field_description:x_plan.field_work_process__work_stage_cutting_line_id
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_line_form
+msgid "Stage Team Line"
+msgstr "Team Line"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stageteam_list__stageteam_line_ids
+msgid "Stage Team Lines"
+msgstr "Team Lines"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_stageteam_list
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_list_form
+msgid "Stage Team List"
+msgstr "Danh sách nhóm giai đoạn"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__stage_type
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__stage_type
+#: model:ir.model.fields,field_description:x_plan.field_stage__stage_type
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__stage_type
+msgid "Stage Type"
+msgstr "Loại giai đoạn"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_stage
+msgid "Stage in Plan"
+msgstr "Giai đoạn trong kế hoạch"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_x_stage_tree
+msgid "Stages"
+msgstr "Giai đoạn"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_target__start_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__start_date
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__start_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process__start_date
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__start_date
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__start_date
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__start_time
+msgid "Start Time"
+msgstr "Thời gian bắt đầu"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__step
+msgid "Step"
+msgstr "Bước"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__style_name
+msgid "Style Name"
+msgstr "Style"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__subsidy
+msgid "Subsidy"
+msgstr "Trợ cấp"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__support_bonus_percent
+msgid "Support Bonus %"
+msgstr "Hỗ trợ tiền thưởng %"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "T.HIỆN/NGÀY(PCS)"
+msgstr "T.hiện/ngày(PCS)"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__current_s
+msgid "T/Current (S)"
+msgstr "T/hiện tại (S)"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "TIME"
+msgstr "THỜI GIAN"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_target_form
+#: model:ir.model,name:x_plan.model_target
+#: model:ir.model.fields,field_description:x_plan.field_stage__target_ids
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__target_ids
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__target_ids
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_target_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_target_stage_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_target_tree
+msgid "Target"
+msgstr "Target"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__target_status
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__target_status
+msgid "Target Status"
+msgstr "Trạng thái Target"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_target__target_value
+msgid "Target Value"
+msgstr "Giá trị của Target"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_target
+msgid "Targets"
+msgstr "Targets"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_dashboard_performance__team
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__team
+#: model:ir.model.fields,field_description:x_plan.field_work_process__team
+msgid "Team"
+msgstr "Team"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__teams
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Teams"
+msgstr "Teams"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__teams_cut_text
+msgid "Teams Cut"
+msgstr "Đội chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__teams_sew_text
+msgid "Teams Sew"
+msgstr "Đội chuyền May"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__end_time
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__start_time
+msgid "Time"
+msgstr "Thời gian"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_pass_cutting_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Time and Cost"
+msgstr "Thời gian và chi phí"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__timekeeping_id
+#: model:ir.ui.menu,name:x_plan.menu_timekeeping_root
+msgid "Timekeeping"
+msgstr "Chấm công"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_timekeeping_line
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_line_form
+msgid "Timekeeping Line"
+msgstr "Dòng chấm công"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_timekeeping_line
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__timekeeping_line_ids
+#: model_terms:ir.ui.view,arch_db:x_plan.view_assign_more_work_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_line_tree
+msgid "Timekeeping Lines"
+msgstr "Dòng chấm công"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_timekeeping_list
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_kanban
+msgid "Timekeeping List"
+msgstr "Danh sách chấm công"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_timekeeping_list
+#: model:ir.ui.menu,name:x_plan.menu_timekeeping_list
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_tree
+msgid "Timekeeping Lists"
+msgstr "Danh sách chấm công"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__name
+msgid "Timekeeping Name"
+msgstr "Tên chấm công"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Timings"
+msgstr "Thời gian"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__to_be_completed
+#: model:ir.model.fields,field_description:x_plan.field_work_process__to_be_completed
+msgid "To Be Completed"
+msgstr "Được hoàn thành"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/home.xml:0
+#, python-format
+msgid "Top 4"
+msgstr "Top 4"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/home.xml:0
+#, python-format
+msgid "Top 5"
+msgstr "Top 5"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/home.xml:0
+#, python-format
+msgid "Top People"
+msgstr "Top người"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/home.xml:0
+#, python-format
+msgid "Top Products"
+msgstr "Top sản phẩm"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__total_sizes
+msgid "Total"
+msgstr "Tổng cộng"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__total_amount
+msgid "Total Amount"
+msgstr "Tổng cộng"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line_history__unit_price_05
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__total_cost
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting_history__total_cost
+msgid "Total Cost"
+msgstr "Tổng chi phí"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__total_cost_history_ids
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__total_cost_history_ids
+msgid "Total Cost History"
+msgstr "Tổng lịch sử chi phí"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__total_direct_cost
+msgid "Total Direct Cost (May+Pick)"
+msgstr "Tổng chi phí(May+Pick)"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage__quantity_per_team
+msgid "Total Execution Quantity per Team"
+msgstr "Tổng số lượng thực thi cho mỗi đội"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__total_l
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_l
+msgid "Total L"
+msgstr "Tổng L"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__total_m
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_m
+msgid "Total M"
+msgstr "Tổng M"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__total_price
+msgid "Total Price"
+msgstr "Tổng giá"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_products
+msgid "Total Products"
+msgstr "Tổng sản phẩm"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__total_quantity
+#: model:ir.model.fields,field_description:x_plan.field_payroll_list__total_quantity
+#: model:ir.model.fields,field_description:x_plan.field_stage__total_quantity_per_team
+msgid "Total Quantity"
+msgstr "Tổng số lượng"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__total_quantity_received
+msgid "Total Quantity Received"
+msgstr "Tổng số lượng nhận được"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__total_s
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_s
+msgid "Total S"
+msgstr "Tổng S"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__total_size_qty
+msgid "Total Size Quantity"
+msgstr "Tổng số lượng Size"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__total_time
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_time
+msgid "Total Time"
+msgstr "Tổng thời gian"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__total_time
+msgid "Total Time (hours)"
+msgstr "Tổng thời gian (giờ)"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__total_unit_price
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__total_unit_price
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__unit_price
+#: model:ir.model.fields,field_description:x_plan.field_work_process__unit_price
+msgid "Total Unit Price"
+msgstr "Tổng giá"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__total_xl
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_xl
+msgid "Total XL"
+msgstr "Tổng số XL"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__total_xs
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_xs
+msgid "Total XS"
+msgstr "Tổng số XS"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__total_xxl
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__total_xxl
+msgid "Total XXL"
+msgstr "Tổng số XXL"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__entered_quantity
+msgid "Total number of goods imported"
+msgstr "Tổng số hàng hóa nhập khẩu"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work_sub__unit_price
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__unit_price
+#: model:ir.model.fields,field_description:x_plan.field_warehouse_stock__unit_price
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__unit_price
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__unit_price
+msgid "Unit Price"
+msgstr "Đơn giá"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_line__vacation_status
+msgid "Vacation Status"
+msgstr "Trạng thái nghỉ phép"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_timekeeping_list_form
+msgid "Vacation Status Counts"
+msgstr "Số lượng nghỉ phép"
+
+#. module: x_plan
+#: model:ir.actions.client,name:x_plan.action_dashboard_performance_dashboard
+msgid "View Dashboard"
+msgstr "Dashboard"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/home.xml:0
+#, python-format
+msgid "WELCOME TO TIÊN HƯNG JOINT STOCK COMPANY"
+msgstr "Chào mừng đến với Công ty cổ phần Tiên Hưng"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/dashboard_performance.xml:0
+#: model_terms:ir.ui.view,arch_db:x_plan.performance_data_template
+#, python-format
+msgid "WORKER"
+msgstr "CÔNG NHÂN"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_warehouse_stock
+#: model:ir.ui.menu,name:x_plan.menu_warehouse_root
+msgid "Warehouse"
+msgstr "Kho"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_x_plan__warehouse_stock_ids
+#: model_terms:ir.ui.view,arch_db:x_plan.view_warehouse_stock_form
+msgid "Warehouse Stock"
+msgstr "Kho"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_warehouse_stock
+msgid "Warehouse Stock Information"
+msgstr "Thông tin kho hàng"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_warehouse_stock_report_graph
+#: model_terms:ir.ui.view,arch_db:x_plan.view_warehouse_stock_report_graph
+msgid "Warehouse Stock Report"
+msgstr "Báo cáo"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_line_form
+msgid "Work"
+msgstr "Công việc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__work_cutting_ids
+msgid "Work Cutting"
+msgstr "Công việc chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_payroll_line__work_history_ids
+#: model_terms:ir.ui.view,arch_db:x_plan.view_payroll_line_form
+msgid "Work History"
+msgstr "Lịch sử chuyền Cắt"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Work List"
+msgstr "Danh sách công việc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_stage_line__work_pass_cutting_ids
+msgid "Work Pass Cutting"
+msgstr "Công việc chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.actions.act_window,name:x_plan.action_work_cutting_stage_team_list
+#: model:ir.actions.act_window,name:x_plan.action_work_process
+#: model:ir.actions.act_window,name:x_plan.action_work_process_form
+#: model:ir.actions.act_window,name:x_plan.action_work_process_form_pass_cutting
+#: model:ir.actions.act_window,name:x_plan.action_work_process_form_pass_cutting_stage_team_list
+#: model:ir.actions.act_window,name:x_plan.action_work_process_form_stage_team_list
+#: model:ir.actions.act_window,name:x_plan.action_work_process_pass_cutting
+#: model:ir.model,name:x_plan.model_work_process
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__work_process_id
+#: model:ir.model.fields,field_description:x_plan.field_stage__work_pass_cutting_id
+#: model:ir.model.fields,field_description:x_plan.field_stage__work_process_id
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_pass_cutting_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_tree_productivity_reports_pass_cutting
+#: model_terms:ir.ui.view,arch_db:x_plan.view_tree_productivity_reports_sew
+#: model_terms:ir.ui.view,arch_db:x_plan.view_tree_work_process
+#: model_terms:ir.ui.view,arch_db:x_plan.view_tree_work_process_pass_cutting
+msgid "Work Process"
+msgstr "Quá trình làm việc"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_work_sew
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_work_process
+msgid "Work Process Cutting Line"
+msgstr "Công việc chuyền cắt"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_work_process_cutting_sub
+msgid "Work Process Cutting Sub"
+msgstr "Quá trình công việc chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_work_pass_cutting
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__work_process_id
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_productivity_reports_pass_cutting
+#: model_terms:ir.ui.view,arch_db:x_plan.view_form_work_process_pass_cutting
+msgid "Work Process Pass Cutting"
+msgstr "Quá trình công việc chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model,name:x_plan.model_work_pass_cutting_sub
+msgid "Work Process Pass Cutting Sub"
+msgstr "Quá trình làm việc chuyền Cắt"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_employee_work_history__work_step
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__work_step
+#: model:ir.model.fields,field_description:x_plan.field_work_process__work_step
+msgid "Work Step"
+msgstr "Bước làm việc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__name
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__name
+msgid "Work Steps"
+msgstr "Các bước làm việc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting__work_sub_ids
+#: model:ir.model.fields,field_description:x_plan.field_work_process__work_sub_ids
+msgid "Work Sub"
+msgstr "Công việc phụ"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_work_pass_cutting_sub__work_sub_id
+#: model:ir.model.fields,field_description:x_plan.field_work_process_cutting_sub__work_sub_id
+msgid "Work Subs"
+msgstr "Công việc phụ"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_cutting_line_form
+#: model_terms:ir.ui.view,arch_db:x_plan.view_stage_form
+msgid "Worker Information"
+msgstr "Thông tin công việc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_cutting_line__worker_type
+#: model:ir.model.fields,field_description:x_plan.field_pass_cutting__worker_type
+msgid "Worker Type"
+msgstr "Loại công việc"
+
+#. module: x_plan
+#: model:ir.ui.menu,name:x_plan.menu_productivity_reports_views_root
+#: model:ir.ui.menu,name:x_plan.menu_productivity_reports_views_works_sub
+msgid "Works"
+msgstr "Công việc"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__xl
+#: model:ir.model.fields.selection,name:x_plan.selection__warehouse_stock__product_size__xl
+msgid "XL"
+msgstr "XL"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__xs
+#: model:ir.model.fields.selection,name:x_plan.selection__warehouse_stock__product_size__xs
+msgid "XS"
+msgstr "XS"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_product__xxl
+#: model:ir.model.fields.selection,name:x_plan.selection__warehouse_stock__product_size__xxl
+msgid "XXL"
+msgstr "XXL"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__ex_employee
+msgid "ex-Employee"
+msgstr "Nhân viên cũ"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_assign_more_work__ex_employee_card_number
+msgid "ex-Employee Card Number"
+msgstr "Số thẻ nhân viên cũ"
+
+#. module: x_plan
+#. odoo-javascript
+#: code:addons/x_plan/static/src/components/kpi_card/kpi_card.xml:0
+#, python-format
+msgid "since last period"
+msgstr "kể từ giai đoạn cuối"
+
+#. module: x_plan
+#: model_terms:ir.ui.view,arch_db:x_plan.view_plan_calendar
+msgid "x Plans"
+msgstr "X kế hoạch"
+
+#. module: x_plan
+#: model:ir.model.fields,field_description:x_plan.field_timekeeping_list__vacation_status_d_count
+msgid "Đ Count"
+msgstr "Đ số lượng"
